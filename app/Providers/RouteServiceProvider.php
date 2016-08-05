@@ -20,7 +20,7 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Define your route model bindings, pattern filters, etc.
      *
-     * @param  \Illuminate\Routing\Router  $router
+     * @param  \Illuminate\Routing\Router $router
      * @return void
      */
     public function boot(Router $router)
@@ -33,7 +33,7 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Define the routes for the application.
      *
-     * @param  \Illuminate\Routing\Router  $router
+     * @param  \Illuminate\Routing\Router $router
      * @return void
      */
     public function map(Router $router)
@@ -48,7 +48,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * These routes all receive session state, CSRF protection, etc.
      *
-     * @param  \Illuminate\Routing\Router  $router
+     * @param  \Illuminate\Routing\Router $router
      * @return void
      */
     protected function mapWebRoutes(Router $router)
@@ -57,7 +57,25 @@ class RouteServiceProvider extends ServiceProvider
             'namespace' => $this->namespace, 'middleware' => 'web',
         ], function ($router) {
             require app_path('Http/routes.php');
-            require app_path('Http/routes_dosen.php');
+            //harvi
+            require app_path('Http/route/dosen.php');
+            require app_path('Http/route/mitra.php');
+            require app_path('Http/route/sdm.php');
+            //grady
+            require app_path('Http/route/calon_mahasiswa.php');
+            require app_path('Http/route/mahasiswa.php');
+            require app_path('Http/route/profil_mahasiswa.php');
+            //ronald
+            require app_path('Http/route/pengajaran.php');
+            //dana
+            require app_path('Http/route/penelitian_publikasi.php');
+            require app_path('Http/route/sarana_prasarana.php');
+            require app_path('Http/route/pkm.php'); //Program Kreativitas Mahasiswa
+            require app_path('Http/route/profil_dosen.php');
+            //junaidy
+            require app_path('Http/route/p2m.php'); //Pengabdian pada Masyarakat
+            require app_path('Http/route/keuangan.php');
+            require app_path('Http/route/alumni.php');
         });
     }
 }

@@ -11,9 +11,5 @@
 |
 */
 
-Route::get('dosen', function () {
-    return view('dashboard');
-});
-
 //contoh controller di dalam folder
-Route::get('dosen2', 'Dosen\DosenController@index');
+Route::get('dosen', 'Dosen\DosenController@index');

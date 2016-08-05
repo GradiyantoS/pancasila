@@ -12,6 +12,6 @@ class DosenController extends Controller
     //
     public function index()
     {
-        return "hva";
+        return view('pages.dosen.index');
     }
 }
