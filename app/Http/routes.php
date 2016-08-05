@@ -22,18 +22,22 @@ Route::any('php_info', function () {
 // Filter
 
 // Filter Insert Menu
-Route::get('filter/filterInputMenu/{idaplikasi}', 'FilterController@filterInputMenu');
+Route::group(['prefix' => 'filter'], function () {
 
-// Aplikasi
-Route::get('filter/getAllDataAplikasi', 'FilterController@getAllDataAplikasi');
-// Menu
-Route::get('filter/getAllDataMenu', 'FilterController@getAllDataMenu');
-// Level Jabatan
-Route::get('filter/getAllDataLevelJabatan', 'FilterController@getAllDataLevelJabatan');
-// Jabatan
-Route::get('filter/getAllDataJabatan/{idLevelJabatan}', 'FilterController@getAllDataJabatan');
-// Status
-Route::get('filter/getAllDataStatus', 'FilterController@getAllDataStatus');
+    Route::get('filterInputMenu/{idaplikasi}', 'FilterController@filterInputMenu');
+
+    // Aplikasi
+    Route::get('getAllDataAplikasi', 'FilterController@getAllDataAplikasi');
+    // Menu
+    Route::get('getAllDataMenu', 'FilterController@getAllDataMenu');
+    // Level Jabatan
+    Route::get('getAllDataLevelJabatan', 'FilterController@getAllDataLevelJabatan');
+    // Jabatan
+    Route::get('getAllDataJabatan/{idLevelJabatan}', 'FilterController@getAllDataJabatan');
+    // Status
+    Route::get('getAllDataStatus', 'FilterController@getAllDataStatus');
+});
+
 
 
 
