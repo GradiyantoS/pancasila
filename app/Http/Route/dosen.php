@@ -13,3 +13,5 @@
 
 //contoh controller di dalam folder
 Route::get('dosen', 'Dosen\DosenController@index');
+
+Route::get('perbadingan/dosen', 'Dosen\DosenController@perbadingan');

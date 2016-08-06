@@ -14,4 +14,9 @@ class DosenController extends Controller
     {
         return view('pages.dosen.index');
     }
+
+    public function perbadingan()
+    {
+        return view('pages.dosen.perbandingan');
+    }
 }
